@@ -1,3 +1,5 @@
+# --- EXCLUSIONES DE NODE/WEB (MANTENER CASI TODO LO QUE TIENES) ---
+
 # Logs
 logs
 *.log
@@ -25,7 +27,7 @@ coverage
 # nyc test coverage
 .nyc_output
 
-# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+# Grunt intermediate storage (https://grunt.com/creating-plugins#storing-task-files)
 .grunt
 
 # Bower dependency directory (https://bower.io/)
@@ -65,7 +67,7 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variable files
+# dotenv environment variable files (¡IMPORTANTE! Si usas .env, solo sube .env.example)
 .env
 .env.*
 !.env.example
@@ -137,3 +139,30 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+
+# -------------------------------------------------------------------
+# --- EXCLUSIONES ADICIONALES PARA CUMPLIR CON LA PRÁCTICA (Angular) ---
+
+# Angular build output (redundante si ya tienes /dist, pero mejor ser explícito)
+/dist
+.angular
+
+# -------------------------------------------------------------------
+# --- EXCLUSIONES ESPECÍFICAS DE ENTORNO (VS Code, macOS, Windows) ---
+
+# VS Code (Carpeta de configuración del espacio de trabajo)
+.vscode/*
+# PERMITIR que suban los archivos de configuración que quieres compartir:
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/pnpm.json
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
